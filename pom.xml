@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>edu.ifpa</groupId>
+    <artifactId>app-jee</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>app-jee-1.0-SNAPSHOT</name>
+    
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.finalName>app-jee</project.build.finalName>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <version.jakartaee>8.0.0</version.jakartaee>
+    </properties>
+
+    <build>
+        <finalName>app-jee</finalName>
+         <plugins>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-war-plugin</artifactId>
+	            <version>3.3.1</version>
+	        </plugin>
+    	</plugins>     
+    </build>
+  
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${version.jakartaee}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    
+</project>
